@@ -1,0 +1,68 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+
+const About = () => {
+  return (
+    <section className="pt-40 text-gray-800">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-2 gap-4 w-full h-auto mt-4">
+          <div className="relative h-80 lg:h-[400px] row-span-2">
+            <Image
+              src="/assets/feature_1.png"
+              alt="Team photo 1"
+              fill
+              className="rounded-xl object-contain"
+            />
+          </div>
+
+          <div className="relative h-36 lg:h-[190px]">
+            <Image
+              src="/assets/feature_2.png"
+              alt="Team photo 2"
+              fill
+              className="rounded-xl object-contain"
+            />
+          </div>
+
+          <div className="relative h-36 lg:h-[190px]">
+            <Image
+              src="/assets/feature_3.png"
+              alt="Team photo 3"
+              fill
+              className="rounded-xl object-contain"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-4xl font-bold mb-6 leading-tight">
+            Empowering <span className="text-[#EB1700]">Teams</span> to Get More
+            Done
+          </h2>
+          <p className="text-gray-600 mb-4 text-lg">
+            At <span className="font-medium text-[#EB1700]">taskduck</span>, we
+            believe that productivity is a team effort. Our platform is built to
+            simplify your day-to-day workflow so you can focus on high-impact
+            tasks.
+          </p>
+          <p className="text-gray-600 mb-6 text-base">
+            With intuitive tools, smart automation, and seamless collaboration,
+            we help businesses and individuals achieve more with less effort.
+            Whether you&apos;re managing a growing team or working solo,
+            taskduck adapts to your needs.
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm">
+            <li>Efficient task tracking and scheduling</li>
+            <li>Real-time team collaboration</li>
+            <li>Advanced analytics for smarter decisions</li>
+            <li>Secure, scalable, and cloud-based</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
