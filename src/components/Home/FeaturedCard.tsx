@@ -1,11 +1,5 @@
+import { FeatureCardProps } from "@/utils/libs";
 import React from "react";
-import { LucideIcon } from "lucide-react";
-
-interface FeatureCardProps {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-}
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => {
   return (

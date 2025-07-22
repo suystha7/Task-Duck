@@ -1,11 +1,42 @@
 "use client";
-import React from "react";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  ChevronUp,
+} from "lucide-react";
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show button after scrolling down
+  useEffect(() => {
+    const toggleVisibility = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="text-gray-800">
-      <div className="w-full py-24 px-6">
+    <footer className="relative text-gray-800 border-t border-gray-300">
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-[#EB1700] text-white p-3 rounded-full shadow-lg hover:bg-[#c91400] transition z-50"
+          aria-label="Scroll to top"
+        >
+          <ChevronUp size={20} />
+        </button>
+      )}
+
+      <div className="w-full py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-3">
             Subscribe to our Newsletter
@@ -54,7 +85,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-10 text-sm text-center text-[#181715]">
-          &copy; {new Date().getFullYear()} taskduck. All rights reserved.
+          &copy; {new Date().getFullYear()} ZapSender. All rights reserved.
         </div>
       </div>
     </footer>

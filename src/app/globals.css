@@ -25,3 +25,32 @@ body {
   color: var(--background);
   font-family: "Poppins", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9F7E0; 
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #eb1700; 
+  border-radius: 100px;
+  border: 2px solid #F9F7E0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c91400;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #eb1700 #F9F7E0;
+}

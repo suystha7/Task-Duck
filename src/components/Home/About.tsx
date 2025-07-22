@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="pt-40 text-gray-800">
+    <section className="pt-40 text-gray-800" id="about">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div className="grid grid-cols-2 gap-4 w-full h-auto mt-4">
           <div className="relative h-80 lg:h-[400px] row-span-2">
@@ -42,7 +42,7 @@ const About = () => {
             Done
           </h2>
           <p className="text-gray-600 mb-4 text-lg">
-            At <span className="font-medium text-[#EB1700]">taskduck</span>, we
+            At <span className="font-medium text-[rgb(235,23,0)]">ZapSender</span>, we
             believe that productivity is a team effort. Our platform is built to
             simplify your day-to-day workflow so you can focus on high-impact
             tasks.

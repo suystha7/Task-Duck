@@ -1,27 +1,8 @@
 "use client";
-import { BarChart3, MousePointerClick, Workflow } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import FeatureCard from "./FeaturedCard";
-
-const features = [
-  {
-    icon: MousePointerClick,
-    title: "Drag & Drop Builder",
-    description: "Create professional emails in minutes, no coding required.",
-  },
-  {
-    icon: Workflow,
-    title: "Automated Workflows",
-    description: "Set up triggers to send the right message at the right time.",
-  },
-  {
-    icon: BarChart3,
-    title: "Advanced Analytics",
-    description:
-      "Track opens, clicks, conversions and optimize your campaigns.",
-  },
-];
+import { features } from "@/data";
 
 const Hero = () => {
   return (
@@ -40,12 +21,6 @@ const Hero = () => {
               className="bg-[#EB1700] text-white px-6 py-3 rounded-full hover:bg-[#c91400] text-center"
             >
               Get Started Free
-            </a>
-            <a
-              href="/pricing"
-              className="px-6 py-3 border rounded-full hover:bg-gray-100 text-center"
-            >
-              View Pricing
             </a>
           </div>
         </div>
