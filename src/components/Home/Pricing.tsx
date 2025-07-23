@@ -1,9 +1,9 @@
 "use client";
 
 import { pricingPlans } from "@/data";
-import { motion } from "framer-motion";
+import { motion, Variants, Transition } from "framer-motion";
 
-const containerVariants = {
+const containerVariants: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.2,
@@ -12,12 +12,15 @@ const containerVariants = {
   hidden: {},
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: {
+      duration: 0.6,
+      ease: "easeOut" as Transition["ease"], 
+    },
   },
 };
 
